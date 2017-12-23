@@ -1,0 +1,64 @@
+@model final.Models.DashboardViewModel
+
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+
+        <table>
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+            </tr>
+            <tr>
+                <td>Ernst Handel</td>
+                <td>Roland Mendel</td>
+                <td>Austria</td>
+            </tr>
+            <tr>
+                <td>Island Trading</td>
+                <td>Helen Bennett</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>Laughing Bacchus Winecellars</td>
+                <td>Yoshi Tannamuri</td>
+                <td>Canada</td>
+            </tr>
+            <tr>
+                <td>Magazzini Alimentari Riuniti</td>
+                <td>Giovanni Rovelli</td>
+                <td>Italy</td>
+            </tr>
+        </table>
+        <div>
+                <div asp-validation-summary="All"></div>
+                <form method="POST" asp-action="AddMovie" asp-controller="Movie">
+                    <div class="form-group">
+                        <label asp-for="MovieForm.Movie"></label>
+                        <input asp-for="MovieForm.Movie" />
+
+                        <label asp-for="MovieForm.Director">Director</label>
+                        <input asp-for="MovieForm.Director" />
+
+                        <label asp-for="MovieForm.Length">Movie Length (in minutes)</label>
+                        <input asp-for="MovieForm.Length" />
+                    </div>
+                    
+                    <input type="submit" />
+                </form>
+        </div>
+
+    </body>
+</html>
